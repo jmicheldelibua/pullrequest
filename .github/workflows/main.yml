@@ -1,0 +1,19 @@
+name: Main CI/CD pipeline
+
+on:
+  release:
+    branches:
+    - main
+    types:
+      - published
+env:
+  AZURE_WEBAPP_NAME: main App 
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  NUGET_VERSION: 5.10.0
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2

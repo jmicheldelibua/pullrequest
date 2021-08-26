@@ -1,0 +1,17 @@
+name: Dev CI/CD pipeline
+
+on:
+  push:
+    branches:
+    - dev
+env:
+  AZURE_WEBAPP_NAME: caribemediadigital 
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+  NUGET_VERSION: 5.10.0
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
