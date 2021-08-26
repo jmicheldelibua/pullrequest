@@ -3,7 +3,7 @@ name: Main CI/CD pipeline
 on:
   release:
     branches:
-    - main
+      - main
     types:
       - published
 env:
