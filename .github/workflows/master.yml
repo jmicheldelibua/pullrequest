@@ -11,11 +11,11 @@ env:
 
 jobs:
   first:
-    if: ${{ endsWith(github.ref,'-master') }}
+    name: Set and checkout
     runs-on: ubuntu-latest
-
     steps:
     - name: checkout repo
+    - uses: actions/checkout@v2
 
       run: |
         cat index.txt
