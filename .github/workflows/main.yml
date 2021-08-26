@@ -12,12 +12,18 @@ env:
   NUGET_VERSION: 5.10.0
 
 jobs:
-  build:
+  first:
     if: github.ref == 'refs/heads/main'
     runs-on: windows-latest
-
     steps:
     - name: checkout repo
 
       run: |
         echo 'Comlpeted jods for deployment in main branch'
+
+  second:
+    runs-on: windows-latest
+    steps:
+      - name: second job
+        run: |
+         echo 'Second Completed jods for deployment in main branch - github.ref: ' ${{ github.ref }}
