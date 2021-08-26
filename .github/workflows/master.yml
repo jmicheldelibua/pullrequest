@@ -21,3 +21,10 @@ jobs:
 
       run: |
         echo 'Comlpeted jods for deployment in master branch'
+  
+  second:
+    runs-on: windows-latest
+    steps:
+      - name: second job
+        run: |
+         echo 'Second Completed jods for deployment in master branch - github.ref: ' ${{ github.ref }}
