@@ -1,23 +1,23 @@
-name: Main CI/CD pipeline
+name: Master CI/CD pipeline
 
 on:
   release:
     tags:
-      - 'main*'
+      - 'master*'
     types:
       - published
 env:
-  AZURE_WEBAPP_NAME: main App 
+  AZURE_WEBAPP_NAME: master App 
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   NUGET_VERSION: 5.10.0
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     runs-on: windows-latest
 
     steps:
     - name: checkout repo
 
       run: |
-        echo 'Comlpeted jods for deployment in main branch'
+        echo 'Comlpeted jods for deployment in master branch'
