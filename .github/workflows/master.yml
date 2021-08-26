@@ -4,7 +4,6 @@ on:
   release:
     types:
       - published
-        
 env:
   AZURE_WEBAPP_NAME: master App 
   ACTIONS_ALLOW_UNSECURE_COMMANDS: true
@@ -12,16 +11,17 @@ env:
 
 jobs:
   first:
-    name: Set and checkout
+    name: Setup and Checkout
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repo
     - uses: actions/checkout@v2
+
+    - name: Checkout repo
 
       run: |
         cat index.txt
-        echo 'Comlpeted first jods for deployment in master branch version: '${{ github.ref }}
-  
+        echo 'Comlpeted first jods for deployment in master branch vesion'${{ github.ref }}
+
   second:
     runs-on: windows-latest
     steps:
