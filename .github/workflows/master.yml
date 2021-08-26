@@ -2,8 +2,8 @@ name: Master CI/CD pipeline
 
 on:
   release:
-      types:
-        - published
+    types:
+      - published
         
 env:
   AZURE_WEBAPP_NAME: master App 
