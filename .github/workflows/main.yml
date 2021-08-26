@@ -11,6 +11,7 @@ env:
 
 jobs:
   first:
+    name: Setup and Checkout
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
