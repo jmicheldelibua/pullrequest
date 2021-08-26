@@ -2,8 +2,6 @@ name: Master CI/CD pipeline
 
 on:
   release:
-    tags:
-      - 'master*'
     types:
       - published
 env:
