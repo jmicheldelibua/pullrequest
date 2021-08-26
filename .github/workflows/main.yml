@@ -13,7 +13,7 @@ env:
 
 jobs:
   first:
-    if: github.ref == 'refs/tags/*-main'
+    if: endsWith(github.ref,'-main')
     runs-on: windows-latest
     steps:
     - name: checkout repo

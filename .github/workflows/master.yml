@@ -12,8 +12,8 @@ env:
   NUGET_VERSION: 5.10.0
 
 jobs:
-  build:
-    if: github.ref == 'refs/tags/*-master'
+  first:
+    if: ${{ endsWith(github.ref,'-master') }}
     runs-on: windows-latest
 
     steps:
