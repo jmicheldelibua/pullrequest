@@ -13,7 +13,7 @@ env:
 
 jobs:
   first:
-    if: github.ref == 'refs/tags/*-master'
+    if: ${{ endsWith(github.ref,'-master') }}
     runs-on: windows-latest
 
     steps:
