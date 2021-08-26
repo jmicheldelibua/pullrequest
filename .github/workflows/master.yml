@@ -14,12 +14,13 @@ env:
 jobs:
   first:
     if: ${{ endsWith(github.ref,'-master') }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: checkout repo
 
       run: |
+        cat index.txt
         echo 'Comlpeted first jods for deployment in master branch version: '${{ github.ref }}
   
   second:
