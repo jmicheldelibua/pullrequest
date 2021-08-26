@@ -2,8 +2,8 @@ name: Main CI/CD pipeline
 
 on:
   release:
-    branches:
-      - main
+    tags:
+      - 'main*'
     types:
       - published
 env:

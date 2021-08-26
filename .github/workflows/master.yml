@@ -2,8 +2,8 @@ name: Master CI/CD pipeline
 
 on:
   release:
-    branches:
-      - master
+    tags:
+      - 'master*'
     types:
       - published
 env:
