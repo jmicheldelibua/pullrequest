@@ -13,14 +13,14 @@ env:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/tags/*-master'
     runs-on: windows-latest
 
     steps:
     - name: checkout repo
 
       run: |
-        echo 'Comlpeted jods for deployment in master branch'
+        echo 'Comlpeted first jods for deployment in master branch version: '${{ github.ref }}
   
   second:
     runs-on: windows-latest
