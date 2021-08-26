@@ -12,7 +12,7 @@ env:
   NUGET_VERSION: 5.10.0
 
 jobs:
-  build:
+  first:
     if: github.ref == 'refs/tags/*-master'
     runs-on: windows-latest
 
