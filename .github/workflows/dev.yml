@@ -13,12 +13,10 @@ jobs:
   build:
     runs-on: windows-latest
 
-    steps:
-    - name: checkout repo
+    steps: 
     - uses: actions/checkout@v2
-    - name: Create and Set Env from Secret
       run: |
         echo env1={{ secrets.env1 }} > .env
         echo env2={{ secrets.env2 }} >> .env
         echo 'look at this:'
-        cat .env
+        cat .env 
